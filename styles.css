@@ -38,3 +38,16 @@ body {
     width: 100%;
     transform: translateY(50%);
 }
+.content {
+    box-sizing: border-box;
+    font-family: consolas;
+    padding: 100px;
+}
+.content h2 {
+    font-size: 4em;
+    margin: 0px;
+    padding: 0px;
+}
+.content p {
+    font-size: 2.2em;
+}
