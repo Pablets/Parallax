@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+<body>
+    <section class="zoom">
+        <img src="imagenes/mountain1.png" id="layer1" alt="" srcset="">
+        <img src="imagenes/mountain2.png" id="layer2" alt="" srcset="">
+        <p>Lorem ipsum dolor sit.</p>
+        <img src="imagenes/text.png" id="text">
+    </section>
+    <section class="content">
+        <h2>simple background</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus aliquam sit, eum temporibus exercitationem iure at molestias incidunt nam, harum eos pariatur. Vel, voluptas recusandae? Iusto fugiat distinctio architecto rerum Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sed esse, optio reiciendis praesentium provident fugiat officia sapiente, nemo qui quam repellendus vitae sit consequuntur ab distinctio deserunt facere tempora rem tempore? Quae omnis architecto porro, deleniti commodi ipsum id voluptas quibusdam voluptatem illum natus veniam cumque dolore cum hic velit praesentium officiis animi! Deserunt, obcaecati. Obcaecati laboriosam cumque tempore voluptatum doloribus dicta placeat provident reprehenderit blanditiis quo repudiandae repellat illo quae deserunt, quisquam sed corrupti quod id quos, repellendus sint minima aspernatur? Quasi reprehenderit sequi obcaecati excepturi maiores tempore aut esse ab odit maxime in assumenda, quaerat mollitia at. </p>
+
+    </section>
+    <script type="text/javascript">
+
+    var layer1 = document.getElementById('layer1')    
+    scroll = window.pageYOffset;
+    document.addEventListener('scroll', function (e) {
+        var offset = window.pageYOffset;
+        scroll = offset;
+        layer1.style.width = (100 + scroll/5) + '%';
+        //layer1.style.filter =${'blur(20px)'}`
+        layer1.style.filter = String.raw`blur(${0 + scroll/100}px)`;
+    });
+
+    var layer2 = document.getElementById('layer2')
+    scroll = window.pageYOffset;
+    document.addEventListener('scroll', function (e) {
+        var offset = window.pageYOffset;
+        scroll = offset;
+        layer2.style.width = (100 + scroll/5) + '%';
+        layer2.style.left = scroll/50 + '%';
+        layer2.style.filter = String.raw`blur(${0 + scroll/40}px)`;
+    });
+
+    var text = document.getElementById('text')
+    scroll = window.pageYOffset;
+    document.addEventListener('scroll', function (e) {
+        var offset = window.pageYOffset;
+        scroll = offset;
+        layer2.style.width = (100 + scroll/5) + '%';
+        text.style.top = - scroll/20 + '%';
+    });
+    </script>
+</body>
+</html>
